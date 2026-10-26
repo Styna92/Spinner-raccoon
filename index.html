@@ -1,7 +1,9 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="img/raccoon.png">
     <title>Spinner raccoon</title>
     <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="style.css">
@@ -14,12 +16,18 @@
         <div class="row justify-content-center align-items-center min-vh-100">
             <div class="col-12 col-md-8 col-lg-6">
                 <div class="card p-3 mt-3 bg-body-secondary border-1 border-black">
-                    <img src="img/ranccoon.jfif" class="img-thumbnail rounded-circle mb-3" alt="...">
+                    <img id="image" src="img/ranccoon.jfif" class="img-thumbnail rounded-circle mb-3" alt="...">
                     <div class="card-body border-top border-black">
                         <p class="card-text text-center">♪ Play the sound ♪</p>
                         <div class="text-center">
-                            <button type="button" class="btn btn-light border-1 border-dark"> ▶️</button>
-                            <button type="button" class="btn btn-light border-1 border-dark"> ⏸️</button>
+                            <audio id="music">
+                                <source src="img/music.mp3" type="audio/mpeg">
+                                Your browser does not support the audio element.
+                            </audio>
+                            <button type="button" class="btn btn-light border-1 border-dark"
+                                id="btn_play" onclick="playPause()"> ⏯️</button>
+                            <button type="button" class="btn btn-light border-1 border-dark"
+                                id="btn_reset" onclick="reset()"> ⏹️</button>
                         </div>
                     </div>
                 </div>
@@ -29,5 +37,6 @@
 
 
     <script src="./node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
